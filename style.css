@@ -1,0 +1,135 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: rgb(42, 35, 35);
+    height: 100vh;
+    width: 100vw;
+
+    display: flex;
+    overflow: hidden;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+.container {
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+
+    z-index: 10;
+
+    overflow: hidden;
+}
+
+.front, .back {
+    position: absolute;
+    border-radius: 25px;
+    background-color:rgb(35, 26, 26);
+    display: inline-block;
+    transition: 1s;
+    top: 50%;
+    left: 50%;
+
+    font-size: 60px;
+    text-align: center;
+    overflow: hidden;
+
+    color: white;
+    backface-visibility: hidden;
+}
+
+.front{
+    z-index: 1;
+}
+.back{
+    height: 80vh;
+    width: 87vw;
+    z-index: 0;
+}
+
+.show{
+    transform: translate(-50%, -50%) rotateY(0deg); 
+}
+.hide{
+    transform: translate(-50%, -50%) rotateY(180deg);
+}
+
+@keyframes text {
+    0% {
+        transform: scale(0.65);
+    } 
+   100% {
+        transform: scale(0.75);
+    } 
+}
+
+.tip{
+    top: 6%;
+    font-family: 'Bad Script';
+    color: rgb(255, 127, 127);
+    position: absolute;
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    font-size: 35px;
+    animation: text 2s ease-in-out infinite alternate-reverse;
+    transition: 0.7s;
+    z-index: 4;
+}
+.tip2{
+    bottom: 6%;
+    font-family: 'Bad Script';
+    position: absolute;
+    color: rgb(255, 127, 127);
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    font-size: 35px;
+    animation: text 2s ease-in-out infinite alternate-reverse;
+    transition: 0.7s;
+    z-index: 4;
+}
+
+img {
+    width: 90vw;
+    margin: 0;
+    position: absolute;
+    z-index: 1;
+}
+
+.dis {
+    color: transparent;
+}
+
+.bg {
+    position: absolute;
+    z-index: -1;
+    top: 50%;
+    left: 50%; 
+    transform: scale(1) translate(-50%, -50%);
+    width: 100vw;
+    height: 100vh;
+    transition-duration: 0.8s;
+}
+
+.big {
+    transform: translate(-50%, -50%) scale(1.6);
+}
+
+.text{
+    position: absolute;
+    font-size: 3.5vw;
+    width: 80vw;
+    left: 50%;
+    translate: -50%;
+    bottom: 5%;
+}
+
+.rose{
+    position: relative;
+    margin-top: 30px;
+}
